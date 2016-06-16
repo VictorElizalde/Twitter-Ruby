@@ -54,7 +54,7 @@ class TweetsController < ApplicationController
       params.require(:tweet).permit(:content)
     end
 
-    def correct_user
-      redirect_to root_path if !current_user.tweet_ids.include? params[:id]
+    def correct_user!
+      redirect_to root_path if !current_user.tweet_ids.include? params[:id].to_i
     end
 end

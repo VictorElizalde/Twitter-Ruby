@@ -35,6 +35,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'factory_girl_rails'
+  gem "ffaker"
+  gem 'sqlite3'
 end
 
 group :development do
@@ -45,10 +48,14 @@ group :development do
   gem 'spring'
 end
 
-group :development do
-   gem 'sqlite3'
+group :production do
+    gem 'pg'
 end
 
-group :test, :production do
-    gem 'pg'
+group :test do
+  gem 'rspec-rails'
+  gem "shoulda-matchers", "~> 3.0"
+  gem "rspec-collection_matchers"
+  gem "capybara"
+  gem "database_cleaner"
 end
