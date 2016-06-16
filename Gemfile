@@ -58,4 +58,5 @@ group :test do
   gem "rspec-collection_matchers"
   gem "capybara"
   gem "database_cleaner"
+  gem "capybara-webkit"
 end
